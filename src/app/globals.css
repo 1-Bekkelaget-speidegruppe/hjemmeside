@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  /* Official Norges Speiderforbund Palette */
+  --color-bever: #7a6422;
+  --color-smaspeider: #f2cc07;
+  --color-stifinner: #4d647c;
+  --color-vandrer: #63ac3b;
+  --color-rover: #751052;
+  --color-leder: #2baccc;
+  
+  /* Custom "Nordic" overrides for better aesthetics */
+  --color-forest-deep: #1a3c34; /* Darker, more premium green */
+  --color-sand-warm: #f5f3ef;
+  
+  --color-orange: #d47f00;
+  --color-red: #97282e;
+  --color-grey: #e5e7eb;
+  
+  /* Semantic mappings */
+  --color-primary: var(--color-forest-deep);
+  --color-secondary: var(--color-stifinner);
+  --color-accent: var(--color-orange);
+  
+  --font-sans: var(--font-din), "DIN", "Arial Narrow", Arial, sans-serif;
+  --font-serif: Georgia, "Times New Roman", serif;
+}
+
+:root {
+  --background: #fcfcfc;
+  --foreground: #1a1a1a;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
