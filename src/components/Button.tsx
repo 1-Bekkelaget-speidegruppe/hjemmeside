@@ -1,4 +1,9 @@
+"use client";
+
 import Link from 'next/link';
+import { motion } from 'framer-motion';
+
+const MotionLink = motion(Link);
 
 interface ButtonProps {
   children: React.ReactNode;
@@ -9,21 +14,44 @@ interface ButtonProps {
 }
 
 export default function Button({ children, href, variant = 'primary', className = '', onClick }: ButtonProps) {
-  const baseStyles = "inline-flex items-center justify-center px-8 py-4 rounded-lg font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer text-sm shadow-sm hover:shadow-md hover:-translate-y-0.5";
+  const baseStyles = "inline-flex items-center justify-center px-8 py-4 rounded-lg font-bold uppercase tracking-wider cursor-pointer text-sm shadow-sm";
   const variants = {
-    primary: "bg-primary text-white hover:bg-[#142f29]",
-    secondary: "bg-white text-primary border-2 border-white hover:bg-gray-100",
-    outline: "bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white",
-    flokk: "bg-smaspeider text-black hover:bg-[#d9b706]",
-    tropp: "bg-stifinner text-white hover:bg-[#3a5065]",
-    rover: "bg-rover text-white hover:bg-[#5a0c3f]"
+    primary: "bg-primary text-white",
+    secondary: "bg-white text-primary border-2 border-white",
+    outline: "bg-transparent border-2 border-primary text-primary",
+    flokk: "bg-smaspeider text-black",
+    tropp: "bg-stifinner text-white",
+    rover: "bg-rover text-white"
   };
 
   const combinedClassName = `${baseStyles} ${variants[variant]} ${className}`;
 
+  const hoverAnimation = {
+    rotate: [0, -2, 2, -1, 1, 0],
+    transition: { duration: 0.4 }
+  };
+
   if (href) {
-    return <Link href={href} className={combinedClassName}>{children}</Link>;
+    return (
+      <MotionLink 
+        href={href}
+        className={combinedClassName}
+        whileHover={hoverAnimation}
+        whileTap={{ scale: 0.98 }}
+      >
+        {children}
+      </MotionLink>
+    );
   }
 
-  return <button onClick={onClick} className={combinedClassName}>{children}</button>;
+  return (
+    <motion.button 
+      onClick={onClick} 
+      className={combinedClassName}
+      whileHover={hoverAnimation}
+      whileTap={{ scale: 0.98 }}
+    >
+      {children}
+    </motion.button>
+  );
 }

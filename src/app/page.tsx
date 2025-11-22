@@ -14,10 +14,10 @@ export default function Home() {
         ctaLink="/bli-med"
       />
 
-      <Section bg="grey" className="py-20">
+      <Section bg="grey" className="py-20" slopeTop slopeAngle="right">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="order-2 md:order-1">
-            <CleanImage src="/tropp.jpg" alt="Speidere på tur" className="h-96 w-full shadow-lg" />
+            <CleanImage src="/tropp.jpg" alt="Speidere på tur" className="h-96 w-full shadow-lg" delay={0.2} />
           </div>
           <div className="order-1 md:order-2">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 uppercase tracking-wide">Velkommen ut</h2>
@@ -32,7 +32,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section bg="white">
+      <Section bg="white" slopeTop slopeAngle="left">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl font-bold text-foreground mb-4 uppercase tracking-wide">Våre avdelinger</h2>
           <p className="text-lg text-gray-600">
@@ -43,7 +43,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="group bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
             <div className="h-48 relative">
-               <img src="/flokk.jpg" alt="Flokk" className="w-full h-full object-cover" />
+               <img src="/flokk.jpg" alt="Flokk" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                <div className="absolute inset-0 bg-black/20"></div>
                <div className="absolute bottom-2 left-4 text-white font-bold text-xl drop-shadow-md">FLOKK</div>
             </div>
@@ -58,7 +58,7 @@ export default function Home() {
           
           <div className="group bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
             <div className="h-48 relative">
-               <img src="/tropp.jpg" alt="Tropp" className="w-full h-full object-cover" />
+               <img src="/tropp.jpg" alt="Tropp" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                <div className="absolute inset-0 bg-black/20"></div>
                <div className="absolute bottom-2 left-4 text-white font-bold text-xl drop-shadow-md">TROPP</div>
             </div>
@@ -73,7 +73,7 @@ export default function Home() {
           
           <div className="group bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
             <div className="h-48 relative">
-               <img src="/rover.jpg" alt="Rover" className="w-full h-full object-cover" />
+               <img src="/rover.jpg" alt="Rover" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                <div className="absolute inset-0 bg-black/20"></div>
                <div className="absolute bottom-2 left-4 text-white font-bold text-xl drop-shadow-md">ROVER</div>
             </div>
@@ -88,7 +88,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section bg="vandrer" className="text-center">
+      <Section bg="vandrer" className="text-center" slopeTop slopeAngle="right">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 uppercase tracking-wide">Klar for nye eventyr?</h2>
           <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto font-normal">

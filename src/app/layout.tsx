@@ -13,6 +13,9 @@ const barlow = Barlow({
 export const metadata: Metadata = {
   title: "1. Bekkelaget Speidergruppe",
   description: "Naturopplevelser, mestring og fellesskap i Ekeberg, Bekkelaget og Nordstrand.",
+  icons: {
+    icon: '/logo-speiderne.png',
+  },
 };
 
 export default function RootLayout({
@@ -23,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="no">
       <body
-        className="${barlow.variable} antialiased flex flex-col min-h-screen bg-background text-foreground font-sans"
+        className="${barlow.variable} antialiased flex flex-col min-h-screen bg-background text-foreground font-sans overflow-x-hidden"
       >
         <Navbar />
         <main className="flex-grow">
