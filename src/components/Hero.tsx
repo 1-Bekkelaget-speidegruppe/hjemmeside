@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Button from "./Button";
 import { motion } from "framer-motion";
 
@@ -17,12 +18,18 @@ export default function Hero({ title, subtitle, ctaText, ctaLink }: HeroProps) {
 
   return (
     <div className="relative bg-primary text-white min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image - static for performance */}
+      {/* Background Image - optimized with Next.js Image */}
       <div className="absolute inset-0 z-0">
-        <img
+        <Image
           src="/hero.jpg"
           alt="Speidere på tur"
-          className="w-full h-full object-cover"
+          fill
+          priority
+          quality={85}
+          sizes="100vw"
+          className="object-cover"
+          placeholder="blur"
+          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUH/8QAIhAAAgEDBAMBAAAAAAAAAAAAAQIDAAQRBRIhMQYTQWH/xAAVAQEBAAAAAAAAAAAAAAAAAAADBP/EABkRAAIDAQAAAAAAAAAAAAAAAAECABEhMf/aAAwDAQACEQMRAD8AzrT9Nmu7eO4trmGWGQbkkjkDKw+gg0qUpCk5T2TZn//Z"
         />
         {/* Multi-layer gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-primary/40 to-primary"></div>
