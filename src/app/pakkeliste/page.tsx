@@ -1,5 +1,22 @@
 import Section from "@/components/Section";
 import Button from "@/components/Button";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Pakkeliste for speidertur",
+  description:
+    "Pakkeliste for turer og leir med 1. Bekkelaget Speidergruppe. Tips til hva du bør ha med på speidertur.",
+  keywords: [
+    "pakkeliste speider",
+    "pakkeliste tur",
+    "pakkeliste leir",
+    "turutstyr barn",
+  ],
+  openGraph: {
+    title: "Pakkeliste | 1. Bekkelaget Speidergruppe",
+    description: "Pakkeliste for turer og leir.",
+  },
+};
 
 export default function Pakkeliste() {
   return (

@@ -1,0 +1,21 @@
+{
+  "name": "1. Bekkelaget Speidergruppe",
+  "short_name": "1. Bekkelaget",
+  "description": "Speidergruppe i Oslo siden 1915. Friluftsliv, fellesskap og eventyr for barn og unge.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a3c34",
+  "theme_color": "#1a3c34",
+  "icons": [
+    {
+      "src": "/logo-speiderne.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo-speiderne.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

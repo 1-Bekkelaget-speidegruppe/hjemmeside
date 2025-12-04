@@ -1,5 +1,16 @@
 import Section from "@/components/Section";
 import Button from "@/components/Button";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Bilder fra eventyrene",
+  description:
+    "Se bilder fra turer, leir og aktiviteter med 1. Bekkelaget Speidergruppe i Oslo. Minner fra over 110 år med speiding!",
+  openGraph: {
+    title: "Bilder | 1. Bekkelaget Speidergruppe",
+    description: "Bilder fra turer, leir og aktiviteter i Oslo.",
+  },
+};
 
 export default function Bilder() {
   return (

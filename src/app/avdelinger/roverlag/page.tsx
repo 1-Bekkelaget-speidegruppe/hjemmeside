@@ -1,5 +1,25 @@
 import Section from "@/components/Section";
 import Button from "@/components/Button";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Roverlag - Speiding for 16-25 år",
+  description:
+    "Roverlag er for unge voksne 16-25 år. Turer, arrangementer og sterkt fellesskap. Bli med på 1. Bekkelaget Speidergruppe i Oslo!",
+  keywords: [
+    "roverlag",
+    "rover",
+    "speider unge voksne",
+    "speiding 16-25",
+    "friluftsliv unge voksne",
+    "fellesskap oslo",
+  ],
+  openGraph: {
+    title: "Roverlag | 1. Bekkelaget Speidergruppe",
+    description:
+      "Speiding for unge voksne 16-25 år! Turer og fellesskap i Oslo.",
+  },
+};
 
 export default function Roverlag() {
   const aktiviteter = [

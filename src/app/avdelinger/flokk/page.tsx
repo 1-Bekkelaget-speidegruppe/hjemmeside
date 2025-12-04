@@ -1,5 +1,25 @@
 import Section from "@/components/Section";
 import Button from "@/components/Button";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Flokk - Speiding for 3.-4. trinn",
+  description:
+    "Flokk er for de yngste speiderne i 3.-4. trinn. Lek, enkle speiderferdigheter og korte turer i Oslo. Møter torsdager 18:00-19:30 på Ekebergveien 243.",
+  keywords: [
+    "flokk",
+    "småspeider",
+    "speider barn",
+    "speiding 3 trinn",
+    "speiding 4 trinn",
+    "aktiviteter barn oslo",
+    "friluftsliv barn",
+  ],
+  openGraph: {
+    title: "Flokk | 1. Bekkelaget Speidergruppe",
+    description: "Speiding for de yngste! Flokk for 3.-4. trinn i Oslo.",
+  },
+};
 
 export default function Flokk() {
   const aktiviteter = [

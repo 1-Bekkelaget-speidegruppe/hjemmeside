@@ -1,5 +1,26 @@
 import Section from "@/components/Section";
 import Button from "@/components/Button";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Tropp - Speiding for 5.-10. trinn",
+  description:
+    "Tropp er for speidere i 5.-10. trinn. Patruljearbeid, leir, lengre turer og ledelse. Møter torsdager 19:00-20:30 på Ekebergveien 243 i Oslo.",
+  keywords: [
+    "tropp",
+    "stifinner",
+    "vandrer",
+    "speider ungdom",
+    "speiderleir",
+    "patruljearbeid",
+    "friluftsliv ungdom oslo",
+  ],
+  openGraph: {
+    title: "Tropp | 1. Bekkelaget Speidergruppe",
+    description:
+      "Speiding for 5.-10. trinn! Patruljer, leir og eventyr i Oslo.",
+  },
+};
 
 export default function Tropp() {
   const aktiviteter = [

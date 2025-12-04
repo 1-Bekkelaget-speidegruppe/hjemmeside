@@ -1,6 +1,30 @@
 import Section from "@/components/Section";
 import Link from "next/link";
 import Button from "@/components/Button";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Avdelinger - Flokk, Tropp og Roverlag",
+  description:
+    "Speiding for alle aldre i Oslo! Flokk (3.-4. trinn), Tropp (5.-10. trinn) og Roverlag (16-25 år). Finn din aldersgruppe og bli med på eventyr med 1. Bekkelaget Speidergruppe.",
+  keywords: [
+    "speider avdelinger",
+    "flokk oslo",
+    "tropp oslo",
+    "roverlag oslo",
+    "småspeider",
+    "stifinner",
+    "vandrer",
+    "rover",
+    "speiding barn",
+    "speiding ungdom",
+  ],
+  openGraph: {
+    title: "Avdelinger | 1. Bekkelaget Speidergruppe",
+    description:
+      "Speiding for alle aldre! Flokk, Tropp og Roverlag i Oslo. Finn din aldersgruppe.",
+  },
+};
 
 export default function Avdelinger() {
   const avdelinger = [
