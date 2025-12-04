@@ -146,9 +146,6 @@ export default function Footer() {
               © {currentYear} 1. Bekkelaget Speidergruppe. Alle rettigheter
               reservert.
             </p>
-            <p className="text-sm text-white/40 flex items-center gap-2">
-              Laget med <span className="text-red-400">❤️</span> i Oslo
-            </p>
           </div>
         </div>
       </div>

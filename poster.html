@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <title>1. Bekkelaget speidergruppe – Eventyret venter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --green-dark: #0f3d26;
+        --beige-light: #e5d7b2;
+        --text-light: #ffffff;
+        --bg-light: #f7f4ec;
+        --max-width: 800px;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+          sans-serif;
+        background: var(--bg-light);
+        color: #1f2933;
+        display: flex;
+        justify-content: center;
+        padding: 24px;
+      }
+
+      .poster {
+        background: #ffffff;
+        max-width: var(--max-width);
+        width: 100%;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+      }
+
+      /* HERO SECTION */
+      .hero {
+        position: relative;
+        min-height: 260px;
+        background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.7)
+          ),
+          url("https://images.pexels.com/photos/5584544/pexels-photo-5584544.jpeg");
+        /* ↑ BYTT BILDE HER – bruk eget speiderbilde / Unsplash-link */
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: flex-end;
+        padding: 32px 32px 40px;
+        color: var(--text-light);
+      }
+
+      .hero-content {
+        max-width: 560px;
+      }
+
+      .hero-kicker {
+        font-size: 0.85rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        opacity: 0.9;
+        margin-bottom: 8px;
+      }
+
+      .hero-title {
+        font-family: "Montserrat", system-ui, sans-serif;
+        font-weight: 800;
+        font-size: clamp(2.2rem, 3vw, 2.8rem);
+        line-height: 1.05;
+        margin-bottom: 10px;
+      }
+
+      .hero-subtitle {
+        font-size: 1rem;
+        max-width: 30rem;
+        opacity: 0.98;
+      }
+
+      /* CONTENT SECTION */
+      .content {
+        padding: 28px 24px 28px;
+      }
+
+      @media (min-width: 768px) {
+        .content {
+          padding: 32px 40px 36px;
+        }
+      }
+
+      .lead {
+        font-size: 1.05rem;
+        margin-bottom: 18px;
+      }
+
+      .lead strong {
+        font-weight: 600;
+        color: var(--green-dark);
+      }
+
+      .trust {
+        font-size: 0.98rem;
+        line-height: 1.5;
+        margin-bottom: 22px;
+      }
+
+      .benefits {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 12px 18px;
+        margin-bottom: 26px;
+      }
+
+      .benefit {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        font-size: 0.95rem;
+      }
+
+      .benefit-emoji {
+        font-size: 1.3rem;
+      }
+
+      /* CTA / QR SECTION */
+      .cta-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding: 18px 16px 10px;
+        border-radius: 12px;
+        background: rgba(15, 61, 38, 0.06);
+        border: 1px solid rgba(15, 61, 38, 0.16);
+        margin-bottom: 22px;
+      }
+
+      @media (min-width: 640px) {
+        .cta-section {
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          padding: 18px 20px;
+        }
+      }
+
+      .cta-text-block {
+        text-align: center;
+      }
+
+      @media (min-width: 640px) {
+        .cta-text-block {
+          text-align: left;
+        }
+      }
+
+      .cta-title {
+        font-family: "Montserrat", system-ui, sans-serif;
+        font-weight: 600;
+        font-size: 1.1rem;
+        color: var(--green-dark);
+        margin-bottom: 4px;
+      }
+
+      .cta-subtitle {
+        font-size: 0.95rem;
+      }
+
+      .cta-qr {
+        width: 120px;
+        height: 120px;
+        background: #ffffff;
+        border-radius: 12px;
+        border: 1px dashed rgba(15, 61, 38, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.75rem;
+        text-align: center;
+        padding: 8px;
+      }
+
+      .cta-qr img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 10px;
+      }
+
+      /* FOOTER */
+      .footer {
+        border-top: 1px solid #e5e1d8;
+        padding-top: 14px;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        font-size: 0.85rem;
+        color: #4b5563;
+      }
+
+      @media (min-width: 600px) {
+        .footer {
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+        }
+      }
+
+      .footer-left {
+        font-weight: 500;
+        color: var(--green-dark);
+      }
+
+      .footer-right {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="poster">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-content">
+          <div class="hero-kicker">1. Bekkelaget speidergruppe</div>
+          <h1 class="hero-title">Eventyret venter.</h1>
+          <p class="hero-subtitle">
+            Friluftsliv, mestring og ekte fellesskap – fra 3. trinn og resten av
+            livet.
+          </p>
+        </div>
+      </section>
+
+      <!-- CONTENT -->
+      <section class="content">
+        <p class="lead">
+          <strong>I speideren får barna oppleve naturen på ekte</strong> – med
+          turer, bål, leirliv og aktiviteter som gir mestringsfølelse, nye
+          venner og gode minner.
+        </p>
+
+        <p class="trust">
+          Trygge, engasjerte ledere følger barna gjennom aktiviteter tilpasset
+          alder og nivå. Her lærer man gjennom å gjøre – ute i naturen, sammen
+          med andre.
+        </p>
+
+        <div class="benefits">
+          <div class="benefit">
+            <div class="benefit-emoji">🔥</div>
+            <div>Bål, leirliv og mat i naturen</div>
+          </div>
+          <div class="benefit">
+            <div class="benefit-emoji">🧭</div>
+            <div>Kart, kompass og enkel friluftsteknikk</div>
+          </div>
+          <div class="benefit">
+            <div class="benefit-emoji">🤝</div>
+            <div>Fellesskap, samarbeid og ansvar</div>
+          </div>
+          <div class="benefit">
+            <div class="benefit-emoji">🏕️</div>
+            <div>Turer, overnattinger og små og store eventyr</div>
+          </div>
+        </div>
+
+        <div class="cta-section">
+          <div class="cta-text-block">
+            <div class="cta-title">Bli med – scan her</div>
+            <div class="cta-subtitle">
+              Les mer og meld interesse digitalt. Første gang er helt
+              uforpliktende.
+            </div>
+          </div>
+          <div class="cta-qr">
+            <!-- BYTT UT DENNE DIVEN MED ET ORDENTLIG QR-BILDE -->
+            <!-- Eksempel:
+          <img src="qr-kode.png" alt="QR-kode til påmelding">
+          -->
+            QR-kode til<br />påmelding / info
+          </div>
+        </div>
+
+        <footer class="footer">
+          <div class="footer-left">1. Bekkelaget speidergruppe</div>
+          <div class="footer-right">
+            <span>Del av Norges speiderforbund</span>
+            <span>www.ditt-speidernettsted.no</span>
+          </div>
+        </footer>
+      </section>
+    </main>
+  </body>
+</html>

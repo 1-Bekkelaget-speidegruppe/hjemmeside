@@ -100,7 +100,10 @@ export default function Kontakt() {
                     </a>
                     {kontakt.phone && (
                       <a
-                        href={`tel:${kontakt.phone.replace(/\s/g, "")}`}
+                        href={`tel:${(kontakt.phone as string).replace(
+                          /\s/g,
+                          ""
+                        )}`}
                         className="text-gray-600 hover:text-primary text-sm block transition-colors"
                       >
                         {kontakt.phone}
