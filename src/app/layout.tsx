@@ -11,10 +11,17 @@ const barlow = Barlow({
 });
 
 export const metadata: Metadata = {
-  title: "1. Bekkelaget Speidergruppe",
-  description: "Naturopplevelser, mestring og fellesskap i Ekeberg, Bekkelaget og Nordstrand.",
+  title: "1. Bekkelaget Speidergruppe | Alltid beredt siden 1915",
+  description:
+    "Bli med på eventyr i skog og mark! 1. Bekkelaget Speidergruppe tilbyr naturopplevelser, mestring og fellesskap for barn og unge i Ekeberg, Bekkelaget og Nordstrand.",
   icons: {
-    icon: '/logo-speiderne.png',
+    icon: "/logo-speiderne.png",
+  },
+  openGraph: {
+    title: "1. Bekkelaget Speidergruppe",
+    description:
+      "Alltid beredt siden 1915. Naturopplevelser og fellesskap for barn og unge i Oslo.",
+    type: "website",
   },
 };
 
@@ -24,14 +31,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="no">
+    <html lang="no" className="scroll-smooth">
       <body
-        className="${barlow.variable} antialiased flex flex-col min-h-screen bg-background text-foreground font-sans overflow-x-hidden"
+        className={`${barlow.variable} antialiased flex flex-col min-h-screen bg-background text-foreground font-sans overflow-x-hidden`}
       >
         <Navbar />
-        <main className="flex-grow">
-          {children}
-        </main>
+        <main className="flex-grow">{children}</main>
         <Footer />
       </body>
     </html>
